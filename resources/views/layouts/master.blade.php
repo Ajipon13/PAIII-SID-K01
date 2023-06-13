@@ -1,0 +1,9 @@
+@include('layouts.header')
+@include('layouts.navbar')
+@include('layouts.sidebar') 
+      @if(auth()->user()->level=='1')
+          @include('layouts.content')
+      @elseif(auth()->user()->level=='2')
+          @include('layouts.kepaladesa')
+      @endif
+@include('layouts.footer')
