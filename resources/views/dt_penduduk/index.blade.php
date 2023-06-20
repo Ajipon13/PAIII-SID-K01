@@ -24,7 +24,7 @@
     <div class="col-sm-12">
       <div id="example1_wrapper" class="dataTables_wrapper dt-bootstrap4">
           <div class="row">
-            <div class="col-10">
+            <div class="col-9">
                 @if(auth()->user()->level==1)
                   <a href="{{ url('penduduk/create') }}" class="ml-2 btn btn border border-success shadow btn-outline-success text-dark"  ><i class="fa fa-user-plus" aria-hidden="true"></i>Tambah Penduduk</a>
                   <a href="{{ url('dataexport') }}" class="ml-2 btn btn border border-success shadow btn-outline-success  text-dark"><i class="fa fa-download" aria-hidden="true"></i>excel  </a>
@@ -33,7 +33,7 @@
                   <a href="{{ url('cetak') }}" class="ml-2 btn btn border border-success shadow btn-outline-success "><i class="fa fa-download" aria-hidden="true"></i>excel  </a>
                 @endif
             </div>
-          <div class="col-2">
+          <div class="col-3">
             @if(auth()->user()->level==1)
               <form class="form-inline  mt-1" action="{{url('penduduk')}}" method="GET">
                 <div class="input-group input-group">

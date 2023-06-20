@@ -6,7 +6,7 @@
       </nav>
       <nav class="navbar navbar-expand-lg">
         <div class="col-3">
-          <a class="navbar-brand " href="/"><strong class=" text-brand text-info"> DESA NABUNAGE</strong></a>
+          <a class="navbar-brand " href="/"><strong class=" text-brand text-info">INFORMASI DESA </strong></a>
         </div>
         <div class="col-7">
           <div class="navbar justify-content-center">
@@ -29,19 +29,21 @@
     <tr>
      <th>NO</th>
      <th>NAMA</th>
-     <th>EMAIL</th>
-     <th>Foto</th>
+     <th>JENIS KELAMIN</th>
+     <th>AGAMA</th>
+     <th>JABATAN</th>
+     <th>PENDIDIKAN</th>
    <tr>
   </thead>
   <?php $no =1; ?>
-  @foreach($user as $users)
+  @foreach($pegawai as $item)
       <tr>
            <td>{{$no ++}}</td>
-           <td>{{$users->username}}</td>
-           <td>{{$users->email}}</td>
-           <td>
-           <img src="{{ Storage::url($users->image) }}" class="rounded" alt="Foto Anda" style="max-width: 70px;" >
-           </td>
+           <td>{{$item->nama_staf}}</td>
+           <td>{{$item->jenisk_staf}}</td>
+           <td>{{$item->agama_staf}}</td>
+           <td>{{$item->pekerjaan_staf}}</td>
+           <td>{{$item->pendidikan_staf}}</td>
       </tr>
    @endforeach
   </table>

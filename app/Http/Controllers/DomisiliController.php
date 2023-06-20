@@ -28,9 +28,8 @@ class DomisiliController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'no' => 'required',
             'nama' => 'required',
-            'nik' => 'required',
+            'nik' => 'required|between:16,16',
             'jk' => 'required',
             't4_lahir' => 'required',
             'tgl_lahir' => 'required',
@@ -44,7 +43,6 @@ class DomisiliController extends Controller
         ]);
         $data = 0;
         $domisili = Domisili::create([
-            'no'=>$request->no,
             'nama'=>$request->nama,
             'jk'=>$request->jk,
             'nik'=>$request->nik,

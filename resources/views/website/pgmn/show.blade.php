@@ -7,7 +7,7 @@
       </nav>
       <nav class="navbar navbar-expand-lg">
         <div class="col-3">
-          <a class="navbar-brand " href="/"><strong class=" text-brand text-info"> DESA NABUNAGE</strong></a>
+          <a class="navbar-brand " href="/"><strong class=" text-brand text-info">INFORMASI DESA </strong></a>
         </div>
         <div class="col-6">
           <div class="navbar justify-content-center">

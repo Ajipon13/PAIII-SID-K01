@@ -17,16 +17,7 @@
          @csrf
          @method('POST')
         <div class="row">
-      
              <div class="col">
-                <div class="form-group">
-                  <label for="no">Nomor Surat:</label>
-                  <input type="name" name="no" id="no" class="form-control" >
-                  @error('no')
-        <p class="text-danger">{{ $message }}</p>
-    @enderror
-                </div>
-
                 <div class="form-group">
                   <label for="nama">Nama:</label>
                   <input type="text" name="nama" id="nama" class="form-control" >

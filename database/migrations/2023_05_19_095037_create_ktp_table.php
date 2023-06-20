@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('ktp', function (Blueprint $table) {
             $table->id();
-            $table->string('no');
+            $table->string('no',3)->unique();
             $table->string('nik');
             $table->string('nama');
             $table->string('jk');

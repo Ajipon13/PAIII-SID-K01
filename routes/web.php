@@ -221,6 +221,8 @@ Route::group(['middleware' => ['auth']],function(){
             // TANAH
             Route::get('t','TanahController@index');
             Route::get('u','UsahaController@index');
+            Route::get('texport','TanahController@index');
+            Route::get('uexport','UsahaController@index');
 
             Route::get('view-pengumuman/{id}','KepdesController@edit');
             

@@ -14,7 +14,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $user = [[
-            'username'=>'adminisrator',
+            'username'=>'admin',
             'email'=>'admin@example.com',
             'image'=>'',
             'level'  =>'1',

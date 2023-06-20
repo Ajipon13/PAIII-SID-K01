@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('surat_menikah', function (Blueprint $table) {
             $table->id();
-            $table->string('no');
+            $table->string('no',3)->unique();
             $table->string('nama');
             $table->string('kewarganegaraan');
             $table->string('jk');

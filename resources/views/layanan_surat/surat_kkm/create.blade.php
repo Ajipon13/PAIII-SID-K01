@@ -18,10 +18,6 @@
          @method('POST')
         <div class="row">
              <div class="col">
-                <div class="form-group">
-                  <label for="no">Nomor Surat:</label>
-                  <input type="name" name="no" id="no" class="form-control" >
-                </div>
 
                 <div class="form-group">
                   <label for="nama">Nama:</label>

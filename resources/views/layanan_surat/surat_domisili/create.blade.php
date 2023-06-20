@@ -18,10 +18,6 @@
          @method('POST')
         <div class="row">
              <div class="col">
-                <div class="form-group">
-                  <label for="no">Nomor Surat:</label>
-                  <input type="name" name="no" id="no" class="form-control" >
-                </div>
 
                 <div class="form-group">
                   <label for="nama">Nama:</label>
@@ -30,7 +26,10 @@
 
                 <div class="form-group">
                   <label for="nik">NIK:</label>
-                  <input type="text" name="nik" id="nik" class="form-control" >
+                  <input type="text" name="nik" id="nik" value="{{ old('nik') }}" class="form-control @error('nik') is-invalid @enderror">
+                  @error('nik')
+                    <div class="invalid-feedback">{{ $message }}</div>
+                  @enderror
                 </div>
 
                 <div class="form-group">
@@ -41,13 +40,18 @@
                      <option value="Perempuan">Perempuan</option>
                   </select>
                 </div>
+    
+                <div class="form-group">
+                  <label for="t4_lahir">Tempat Lahir</label>
+                  <input type="text" class="form-control" name="t4_lahir" id="t4_lahir" />
+              </div>
 
             </div>
             <div class="col">
- 
+
             <div class="form-group">
-                <label for="t4_lahir">Tempat Lahir</label>
-                <input type="text" class="form-control" name="t4_lahir" id="t4_lahir" />
+                <label for="desa">Alamat Domilisi Desa</label>
+                <input type="text" class="form-control" id="desa" name="desa"/>
             </div>
 
             <div class="form-group">
@@ -63,17 +67,10 @@
                 <label for="pekerjaan">Pekerjaan</label>
                 <input type="text" class="form-control" id="pekerjaan" name="pekerjaan" />
             </div>
-            
 
           </div>
           <div class="col">
-          <div class="form-group">
-                <label for="desa">Alamat Domilisi Desa</label>
-                <input type="text" class="form-control" id="desa" name="desa"/>
-            </div>
-
-
-            <div class="form-group">
+              <div class="form-group">
                 <label for="kecamatan">Kecamatan</label>
                 <input type="text" class="form-control" id="kecamatan" name="kecamatan"/>
             </div>
@@ -87,9 +84,11 @@
                 <label for="agama">Agama</label>
                 <input type="text" class="form-control" id="agama" name="agama" />
             </div>
-            <div class="form-group mt-2">
-                  <button type="submit" class="btn" style="background-color:#81BC00; color:#ffffff;">BUAT SURAT</button>
-                  <a href="{{ url('domisili') }}" class="btn btn-danger">BATAL</a>
+            <div class="form-group mt-5 ">
+              <center>
+                <button type="submit" class="btn" style="background-color:#81BC00; color:#ffffff;">BUAT SURAT</button>
+                <a href="{{ url('domisili') }}" class="btn btn-danger">BATAL</a>
+              </center>
             </div>
 
           </div>

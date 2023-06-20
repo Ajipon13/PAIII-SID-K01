@@ -19,13 +19,11 @@
         <div class="row">
              <div class="col">
                 <div class="form-group">
-                  <label for="no">Nomor Surat:</label>
-                  <input type="name" name="no" id="no" class="form-control" >
-                </div>
-
-                <div class="form-group">
                   <label for="nik">NIK:</label>
-                  <input type="text" name="nik" id="nik" class="form-control" >
+                  <input type="text" name="nik" id="nik" value="{{ old('nik') }}" class="form-control @error('nik') is-invalid @enderror">
+                  @error('nik')
+                    <div class="invalid-feedback">{{ $message }}</div>
+                  @enderror
                 </div>
 
                 <div class="form-group">
@@ -41,6 +39,12 @@
                      <option value="Perempuan">Perempuan</option>
                   </select>
                 </div>
+
+                <div class="form-group">
+                  <label for="pekerjaan">Pekerjaan</label>
+                  <input type="text" class="form-control" id="pekerjaan" name="pekerjaan" />
+              </div>
+
             </div>
 
             <div class="col">
@@ -86,12 +90,7 @@
                 <label for="nama_pasangan">Nama Pasangan</label>
                 <input type="text" class="form-control" id="nama_pasangan" name="nama_pasangan" />
             </div>
-             <div class="form-group">
-                <label for="pekerjaan">Pekerjaan</label>
-                <input type="text" class="form-control" id="pekerjaan" name="pekerjaan" />
-            </div>
 
-            
             <div class="form-group mt-2">
                   <button type="submit" class="btn" style="background-color:#81BC00; color:#ffffff;">BUAT SURAT</button>
                   <a href="{{ url('ktp') }}" class="btn btn-danger">BATAL</a>

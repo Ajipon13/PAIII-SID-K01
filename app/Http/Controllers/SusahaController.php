@@ -42,7 +42,6 @@ class SusahaController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'no' => 'required',
             'nama' => 'required',
             't4_lahir' => 'required',
             'tgl_lahir' => 'required',
@@ -54,13 +53,9 @@ class SusahaController extends Controller
             'sejak' => 'required',
         ]);
 
-//  if ($validator->fails()) {
-//         return redirect()->back()->withErrors($validator)->withInput();
-//     }
 
         $data = 0;
         Surat_Usaha::create([
-            'no' => $request->no,
             'nama' => $request->nama,
             't4_lahir' => $request->t4_lahir,
             'tgl_lahir' => $request->tgl_lahir,

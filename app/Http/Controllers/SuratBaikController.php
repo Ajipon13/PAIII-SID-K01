@@ -33,7 +33,6 @@ class SuratBaikController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'no' => 'required',
             'nama' => 'required',
             'jk' => 'required',
             't4_lahir' => 'required',
@@ -47,7 +46,6 @@ class SuratBaikController extends Controller
         ]);
         $data = 0;
         Surat_baik::create([
-            'no' => $request->no,
             'nama' => $request->nama,
             'jk' => $request->jk,
             't4_lahir' => $request->t4_lahir,

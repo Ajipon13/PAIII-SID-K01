@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('surat_bkawin', function (Blueprint $table) {
             $table->id();
-            $table->string('no');
+            $table->string('no',3)->unique();
             $table->string('nama');
             $table->string('s_pernikaan');
             $table->date('tgl_lahir');

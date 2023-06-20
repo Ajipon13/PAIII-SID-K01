@@ -13,6 +13,14 @@
         <form action="{{ route('profil.update',$edit->id)}}" method="POST" enctype="multipart/form-data">
         @csrf       
         @method('put')
+        <div class="my-2 row">
+                <label for="gam">Gambar Desa </label>
+                <div class="col-10">
+                  <input type="file" name="profile_img" class="form-control" value="{{$edit->profile_img}}"/>
+                <img src="/storage/profile_img/{{ $edit->profile_img }}" style="width:200px; height:100px;">
+
+                </div>  
+            </div>
             <div class="my-2 row">
                 <label for="gam">Profile desa </label>
                 <div class="col-10">

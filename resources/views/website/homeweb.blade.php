@@ -13,7 +13,7 @@
       </nav>
       <nav class="navbar navbar-expand-lg">
         <div class="col-3">
-          <a class="navbar-brand " href="/"><strong class=" text-brand text-info"> DESA NABUNAGE</strong></a>
+          <a class="navbar-brand " href="/"><strong class=" text-brand text-info">INFORMASI DESA</strong></a>
         </div>
         <div class="col-8">
           <div class="navbar justify-content-center">
@@ -29,7 +29,7 @@
 
 <main class="mt-5">
   <div class="text-center text-white mt-5">
-    <b class=" font-weight-bold " style="font-family:Segoe Print; font-size: 44px;"> <br><br><br> SELAMAT DATANG DI WEBSITE <br> DESA NABUNAGE</b>
+    <b class=" font-weight-bold " style="font-family:Segoe Print; font-size: 44px;"> <br><br><br> SELAMAT DATANG DI WEBSITE <br>INFORMASI DESA</b>
   </div>
 </main>
   

@@ -55,7 +55,7 @@
                         <th>Tanggal</th>
                         <th>Judul Pengumuman</th>
                         <th>Deskripsi</th>
-                        <th>Opsi</th>
+                        <th>Aksi</th>
                       </tr>
                     </thead>
                     <tbody>      
@@ -72,21 +72,19 @@
                               @method('DELETE')
                                 <a href="{{ route('pgmn.edit',$item->id) }}" class=" btn btn-warning btn-sm"><i class="fa fa-edit"></i></a>
                                 <button type="submit" class="btn btn-danger btn-sm"  onclick="  return confirm('Apakah Anda Yakin Menghapus Data?');"><i class="fa fa-trash "></i></button>
-                            </form>
-                        </td>
+                              </form>
+                          </td>
                     </tr>
-                    @endforeach
-
+                        @endforeach
                     </tbody>
-                    </table>
+                </table>
               <div class="text-center text-xs">
               </div>
         </div>
       </div>
     </section>
     </div>
-        <!-- /.col -->
-      </div>
+  </div>
 
 @include('layouts.footer')
 

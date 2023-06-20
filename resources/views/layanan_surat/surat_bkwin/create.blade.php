@@ -18,12 +18,6 @@
       @method('POST')
         <div class="row">
              <div class="col">
-
-                <div class="form-group">
-                  <label for="nama">Nomor Surat:</label>
-                  <input type="text" name="no" id="no" class="form-control" >
-                </div>
-
                 <div class="form-group">
                   <label for="nama">Nama:</label>
                   <input type="text" name="nama" id="nama" class="form-control" >
@@ -31,7 +25,10 @@
 
                 <div class="form-group">
                   <label for="nama">NIK:</label>
-                  <input type="text" name="nik" id="nik" class="form-control" >
+                  <input type="text" name="nik" id="nik"  value="{{ old('nik') }}" class="form-control @error('nik') is-invalid @enderror">
+                  @error('nik')
+                    <div class="invalid-feedback">{{ $message }}</div>
+                  @enderror
                 </div>
 
                 <div class="form-group">

@@ -70,8 +70,10 @@ class ProfileDesaController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $galeri = ProfileDesa::findOrFail($id);
+
         $request->validate([
-            'profile_desa' => 'required|text',
+            'profile_desa' => 'required',
             'profile_img'=>'required'
             
         ]);
@@ -84,12 +86,6 @@ class ProfileDesaController extends Controller
         $galeri->profile_desa = $request->profile_desa;
         $galeri->save();
 
-          
-        $strukt->update($input);
-    
-        $product = ProfileDesa::findOrFail($id);
-        $product->profile_desa = $request->input('profile_desa');
-        $product->save();
         return redirect('profil')->with('success','Profile desa telah diedit');
 
     }

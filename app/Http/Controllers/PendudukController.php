@@ -31,6 +31,20 @@ class PendudukController extends Controller
 
     public function store(Request $request){
 
+        $request->validate([
+            'nik_penduduk' => 'required|between:16,16',
+            'nama_penduduk' => 'required',
+            'jk_penduduk' => 'required',
+            'agama_penduduk' => 'required',
+            'status_nikah' => 'required',
+            'pekerjaan_penduduk' => 'required',
+            'dusun_penduduk' => 'required',
+            'tr_penduduk' => 'required',
+            'rw_penduduk' => 'required',
+            'tempat_lahir_penduduk' => 'required',
+            'tanggal_lahir_penduduk' => 'required|date',
+        ]);
+
        $data = Penduduk::create([
         'nik_penduduk'=>$request->nik_penduduk,
         'nama_penduduk'=>$request->nama_penduduk,

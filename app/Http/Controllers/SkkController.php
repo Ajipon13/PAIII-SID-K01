@@ -28,7 +28,6 @@ class SkkController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'no' => 'required',
             'nama' => 'required',
             'jk' => 'required',
             't4_lahir' => 'required',
@@ -43,7 +42,6 @@ class SkkController extends Controller
         ]);
         $value = 0;
         SKK::create([
-            'no' => $request->input('no'),
             'nama' => $request->input('nama'),
             'jk' => $request->input('jk'),
             't4_lahir' => $request->input('t4_lahir'),

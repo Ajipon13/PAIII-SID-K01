@@ -20,11 +20,6 @@
              <div class="col-4">
 
                 <div class="form-group">
-                  <p for="nomor">Nomor Surat:</p>
-                  <input type="text" name="nomor" id="nomor" class="form-control" >
-                </div>
-
-                <div class="form-group">
                   <p for="nama_meninggal">Nama:</p>
                   <input type="text" name="nama_meninggal" id="nama_meninggal" class="form-control" >
                 </div>

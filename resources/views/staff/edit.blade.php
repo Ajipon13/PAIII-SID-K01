@@ -47,7 +47,7 @@
                   </div>
                   <div class="col-10">
                     <select class="form-control form-control" name="jenisk_staf">
-                          <option value="{{$staffedit->id}}">{{$staffedit->jenisk_staf }}</option>
+                          <option value="{{$staffedit->jenisk_staf}}">{{$staffedit->jenisk_staf }}</option>
                           <option>Laki-laki</option>
                           <option>Perempuan</option>
                     </select>

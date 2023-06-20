@@ -4,7 +4,6 @@
 <div class="content-wrapper">
   <div class="content-header">
   <section class="content">
-  <div class="row">
       <div class="col-sm-12">
       <ol class="breadcrumb float-sm">
       <a href="{{ url('Dashboard/admin')}}" class="">Dashboard</a>>
@@ -12,23 +11,24 @@
       <a class="">tambah penduduk</a>
       </ol>
     </div>
-
-<div class="container">
-     <form action="{{ route('penduduk.store') }}" method="POST" enctype="multipart/form-data">
+    <div class="card">
+          <div class="card-header text-center text-bold">
+            Tambah Data Penduduk Baru
+           </div>
+     <form action="{{ route('penduduk.store') }}" method="POST" enctype="multipart/form-data" class="mt-2">
         @csrf
         @method('POST')
-      <div class="card">
-          <div class="catd-header">
-               <h4 class="text-center mt-2">Tambah Data Penduduk Baru</h4>
-               <hr>
-          </div>
+    
              <div class="row">
 
                  <div class="col">
                  <div class="form-group row">
                     <label for="staticEmail" class="col-sm-2 col-form-label text-sm" >Nik</label>
                     <div class="col-sm-10">
-                         <input type="name" class="form-control" autofocus name="nik_penduduk" id="nik" aria-describedby="nikHelp" >
+                         <input type="name" class="form-control" autofocus name="nik_penduduk" id="nik" value="{{ old('nik_penduduk') }}" class="form-control @error('nik_penduduk') is-invalid @enderror">
+                         @error('nik_penduduk')
+                          <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
                      </div>
                     </div>
 
@@ -139,9 +139,8 @@
                            </div>
                       </div>
                     </div>
-                  </div>
-          </form>
-        </div>
+                  </form>
+                </div>
        </section>
      </div>
 </div>

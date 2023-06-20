@@ -24,7 +24,6 @@
             </div>
               </div>
           </div>
-
             <hr style="height:3px; border-width:0; color:gray; background-color:gray;">
             <h5 class="mb-3">SURAT KETERAGAN PENGANTAR KTP </h5>
             <small class="mb-1">No/{{$surat->no}}</small>
@@ -33,7 +32,7 @@
 
       <div class="row mt-5">
       <div class="col-md-4">
-     lkl
+     
       </div>
       <div class="col-md-3 text-center">
         <p>Tanda Tangan:</p>

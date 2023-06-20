@@ -9,6 +9,7 @@ use App\Models\PendudukSementara;
 use App\Models\Kematian;
 use App\Models\ProfileDesa;
 use App\Models\User;
+use App\Models\Staf;
 use App\Models\Pgmn;
 class WebController extends Controller
 {
@@ -56,8 +57,8 @@ public function profile(){
 } 
 
 public function staff(){
-    $user = User::all();
-    return view('website.pddk.users',['user'=>$user]);
+    $pegawai = Staf::all();
+    return view('website.pddk.users',['pegawai'=>$pegawai]);
 }
 
 public function edit($id){

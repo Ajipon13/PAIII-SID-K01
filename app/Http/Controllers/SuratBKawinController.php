@@ -29,7 +29,6 @@ class SuratBKawinController extends Controller
     public function store(Request $request)
     {
          $request->validate([
-            'no' => 'required',
             'nama' => 'required',
             's_pernikaan' => 'required',
             'tgl_lahir' => 'required',
@@ -38,13 +37,12 @@ class SuratBKawinController extends Controller
             'warga_negara' => 'required',
             'alamat' => 'required',
             'jk' => 'required',
-            'nik' => 'required',
+            'nik' => 'required|between:16,16',
             'agama' => 'required',
             'tb_penduduk_id'=>'tb_penduduk_id',
         ]);
         $value = 0;
         Surat_Bkawin::create([
-            'no' => $request->no,
             'nama' => $request-> nama,
             's_pernikaan' => $request-> s_pernikaan,
             'tgl_lahir' => $request-> tgl_lahir,

@@ -10,18 +10,13 @@
    <a class="">form input surat</a>
 <div class="card">
    <div class="card-header text-center text-bold">
-   Buat  Surat Keterangan Berkelakuan Baik
+   Buat Surat Keterangan Berkelakuan Baik
    </div>
    <form action="{{ route('skbb.store') }}" method="post" enctype="multipart/form-data" class="container">
     @csrf
     @method('POST')
         <div class="row">
              <div class="col">
-             <div class="form-group">
-                  <label for="nama">Nomor Suarat:</label>
-                  <input type="text" name="no" id="no" class="form-control" >
-                </div>
-
                 <div class="form-group">
                   <label for="nama">Nama:</label>
                   <input type="text" name="nama" id="nama" class="form-control" >

@@ -92,7 +92,7 @@ class KematianController extends Controller
     {
              $request->validate([
             'nama_' => 'required',
-            'nik' => 'required',
+            'nik' => 'required|between:16,16',
             'jenis_kelamin' => 'required',
             'tempat_lahir' => 'required',
             'tgl_lahir' => 'required',

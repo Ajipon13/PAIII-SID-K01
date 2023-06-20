@@ -41,8 +41,7 @@ class KTPController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'no' => 'required',
-            'nik' => 'required',
+            'nik' => 'required|between:16,16',
             'nama' => 'required',
             'jk' => 'required',
             't4_lahir' => 'required',
@@ -56,9 +55,18 @@ class KTPController extends Controller
             'pekerjaan' => 'required',
             'tb_penduduk_id' => 'tb_penduduk_id',
         ]);
+
+        $validator->setMessages([
+            'nik.size' => 'NIK harus terdiri dari 16 karakter.',
+        ]);
+    
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator)->withInput();
+        }
+
+        
         $data = 0;
         KTP::create([
-            'no' => $request->no,
             'nik' => $request->nik,
             'nama' => $request->nama,
             'jk' => $request->jk,
@@ -75,6 +83,7 @@ class KTPController extends Controller
 
         return redirect('ktp')->with('success','Berhasil Membuat Surat');
     }
+
 
     public function download($id)
     {

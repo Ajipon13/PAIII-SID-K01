@@ -39,4 +39,18 @@ class Surat_Mati extends Model
         $this->approved = $status;
         $this->save();
     }
+
+    protected static function booted()
+    {
+        static::creating(function ($surat) {
+            $lastSurat = static::latest('nomor')->first();
+
+            if ($lastSurat) {
+                $nomor = intval($lastSurat->nomor) + 1;
+                $surat->nomor = sprintf("%03d", $nomor);
+            } else {
+                $surat->nomor = '001';
+            }
+        });
+    }
 }
